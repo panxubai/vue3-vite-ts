@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="container">
+    <view class='logo'>
+          <image src='../../img/logo.png'></image>
+    </view>
+    <view class='searchs'>
+        <view class='commonly'>
+            <view  wx:for="{{sunLi}}" wx:key="key" data-index="{{index}}"  class='sunLi {{liIndex == index?"selection":""}}' bindtap='selectionTap'>{{item}}
+                    </view>
+        </view>
+     <view class='inputSer'>
+            <view class='sanjiao' bindtap='showTap'>
+                  <image src='../../img/home_san.jpg'></image>
+            </view>
+             <view class='inputsum'>
+                    <input placeholder="{{placeholder}}" bindinput="searchEnd" />
+             </view>
+             <view class='magnifier' bindtap='serechTap'>
+                    <image src='../../img/magnifier.jpg'></image>
+             </view>  
+
+
+             <view class='listTitle' style='display:{{showNo?"block":"none"}}'>
+                <view wx:for="{{listTitle}}" wx:key="key" data-index="{{index}}" class='listP {{liTitle == index?"actions":""}}' bindtap='selecTap'>{{item}}</view>
+             </view> 
+      </view>
+    </view>
+
+      <view class='btmText'>本数据来源于网络，仅用于学习与交流</view>
+
+
+</view>

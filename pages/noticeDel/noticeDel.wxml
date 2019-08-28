@@ -1,0 +1,13 @@
+<!--pages/noticeDel/noticeDel.wxml-->
+<view class='container'>
+    <view class='title'>
+     {{sumData.notice.title}}
+    </view>
+  <view class='content'>
+   {{sumData.notice.message}}
+  </view>
+  <view class='time'>
+   {{sumData.notice.time}}
+  </view>
+
+</view>

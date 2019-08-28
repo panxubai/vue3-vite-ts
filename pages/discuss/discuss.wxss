@@ -1,0 +1,121 @@
+/* pages/discuss/discuss.wxss */
+page{
+  background: #edf2f5;
+}
+.container{
+  width: 100%;
+}
+.discussBox{
+  padding-top:12rpx;
+  padding-bottom: 100rpx; 
+}
+.discussBox .discussList{
+  width: 90%;
+  margin: 0 auto;
+}
+.discussBox .discussList .list{
+  width: 100%;
+  padding: 20rpx 40rpx 45rpx;
+  background: #fff;
+  border-radius: 10rpx;
+    box-sizing: border-box;
+    margin-bottom: 20rpx;
+}
+.discussBox .discussList .list .listTop{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.discussBox .discussList .list .listTop .img{
+  width: 60rpx;
+  height: 60rpx;
+    margin-right: 15rpx;
+}
+.discussBox .discussList .list .listTop image{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+
+}
+.discussBox .discussList .list .listTop .text{
+  flex: 1;
+  font-size: 22rpx;
+  line-height: 52rpx;
+}
+.discussBox .discussList .list .listBottom{
+  width: 100%;
+  margin-top: 12rpx;
+}
+.discussBox .discussList .list .listBottom .commitBox{
+  width: 100%;
+    text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+    font-size: 24rpx;
+    color: #505050;
+}
+.discussBox .discussList .list .listBottom text{
+   font-size: 20rpx;
+   color: #797979;
+}
+
+.discussBox .discussList .list .listBottom .zan{
+  width: 60rpx;
+  height: 25rpx;
+  float: right;
+   margin-top: 5rpx;
+}
+.discussBox .discussList .list .listBottom .zan image{
+  width: 25rpx;
+  height: 25rpx;
+  margin-right: 10rpx;
+
+}
+.discussBox .discussList .list .listBottom .zan text{
+     font-size: 20rpx;
+    color: #b7b7b7;
+}
+
+
+.commirIpt{
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.commirIpt button{
+  width: 90%;
+  height: 80rpx;
+  margin-top: 10rpx;
+}
+
+.commirIpt .ipts{
+  width: 90%;
+  margin: 10rpx auto;
+  display: flex;
+}
+.commirIpt .ipts input{
+  width: 80%;
+  height: 80rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  background: #edf2f5;
+  border-radius: 40rpx;
+  border:1px solid #dbd8d8;
+}
+.commirIpt .ipts p{
+  padding: 0 20rpx;
+  height: 80%;
+  background: #00b65f;
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+   border-radius: 20rpx;
+   margin-left: 10rpx;
+}

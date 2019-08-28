@@ -1,0 +1,33 @@
+<!--pages/comment/comment.wxml-->
+<view class='container'>
+  <view class='numberNo' wx:if="{{sumData.status == 201}}">
+       <image src='../../img/journal_page_noct_07.png'></image>
+       <view class='textBox'>
+              您还没有任何评论哦，快去评论吧~
+       </view>
+  </view>
+
+    <view class='box'>
+          <view class='boxList'  wx:for="{{sumData.list}}" wx:key="key">
+                <view class='lefts'>
+                    <p>{{item.message}}</p>
+                    <text>{{item.time}}</text>
+                </view>
+                <view class='rights'>
+                    <view class='status' wx:if="{{item.sta == 0}}">
+                        未审核
+                    </view>
+                    <view class='status1' wx:if="{{item.sta == 1}}">
+                        审核通过
+                    </view>
+                </view>
+          </view>
+
+
+
+          <view class='straight' wx:if="{{sumData.status == 200}}">
+             <view class='cover'>已无更多</view>
+          </view>
+
+    </view>
+</view>

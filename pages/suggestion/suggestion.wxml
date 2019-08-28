@@ -1,0 +1,9 @@
+<!--pages/suggestion/suggestion.wxml-->
+<view class='container'>
+    <view class='textBack'>
+    <textarea placeholder="请留下你的建议" auto-focus bindinput='binIpt' />
+    </view>
+
+    <view class='but' bindtap='ajaxData'>提交</view>
+
+</view>

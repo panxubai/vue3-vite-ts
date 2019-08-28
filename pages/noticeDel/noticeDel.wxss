@@ -1,0 +1,26 @@
+/* pages/noticeDel/noticeDel.wxss */
+.container{
+  width: 100%;
+
+}
+.title,.content,.time{
+width: 90%;
+margin: 0 auto;
+}
+.title{
+  font-size: 34rpx;
+  color: #000;
+  padding: 30rpx 0;
+
+}
+.content{
+  font-size: 28rpx;
+  color: #000;
+  padding-bottom: 30rpx;
+}
+.time{
+  font-size: 24rpx;
+  color: #a1a6a9;
+  padding-bottom: 30rpx;
+}
+  

@@ -1,0 +1,63 @@
+<!--pages/collect/collect.wxml-->
+<view class='container'>
+  <view class='numberNo' wx:if="{{sumData.status == 201}}">
+       <image src='../../img/journal_page_noct_07.png'></image>
+       <view class='textBox'>
+              您还没有收藏任何期刊哦，喜欢就收藏下吧~
+       </view>
+  </view>
+  <view class='perList'>
+        <view class='listLi' wx:for="{{sumData.list}}" wx:key="key" data-id="{{item.id}}" data-slsjk="{{item.slsjk}}" bindtap='detailsTap'>
+         <view class='fengpi'>
+               <image wx:if="{{item.picture == null}}" src='../../img/noImg.jpg' mode="aspectFit"></image> 
+                            <image wx:else src='{{item.picture}}' mode="aspectFit"></image>
+        </view>
+            <view class='textMs'>
+                <view class='pClass'>
+                    <text>{{item.qkmc}}</text>
+                </view>
+                <view class='pClass2'>
+                <image src='../../img/journal_page_ct.jpg'></image>
+                    <text>国家 ： {{item.gb}}</text>
+                </view>
+                <view class='pClass1'>
+                <image src='../../img/journal_page_ct.jpg'></image>
+                    <text>影响因子 :</text>
+                       <p>
+                      {{item.eyxyz}}
+
+                            <wxs module="fn">
+                      module.exports = {
+                          toFix: function (value) {
+                            return value.toFixed(3)
+                          }
+                      }
+                  </wxs>
+
+                      <span wx:if="{{fn.toFix(item.eyxyz-item.dyxyz) > 0}}"> +{{fn.toFix(item.eyxyz-item.dyxyz)}}</span>
+                      <span wx:elif="{{fn.toFix(item.eyxyz-item.dyxyz) < 0}}"> -{{fn.toFix(item.dyxyz-item.eyxyz)}}</span>
+                      <span wx:else>+0</span>
+
+
+                      </p>
+                </view>
+           
+                <view class='pClass2'>
+                <image src='../../img/journal_page_ct.jpg'></image>
+                      <text>国人比例 ： {{item.zgrfwbl}}</text>
+                </view>
+                     <view class='pClass2'>
+                <image src='../../img/journal_page_ct.jpg'></image>
+                    <text>学科 ： {{item.yjxk}}</text>
+                </view>
+                <view class='pClass2'>
+                <image src='../../img/journal_page_ct.jpg'></image>
+                      <text>周期：{{item.zq}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    
+
+
+</view>
